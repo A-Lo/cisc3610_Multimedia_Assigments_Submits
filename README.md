@@ -1,1 +1,1 @@
-# cisc3610_Multimedia_Assigments
+# cisc3610_Multimedia_Proj_Labs
