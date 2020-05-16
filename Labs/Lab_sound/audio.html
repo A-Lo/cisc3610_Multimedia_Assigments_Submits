@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sound Systems</title>
+	<script src="audio.js" defer></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.js"
+  	integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <style type="text/css">
+    	.box-wrapper {
+        width: 500px;
+        margin: 50px auto;
+    }
+    .box-wrapper #centerDIV {
+        margin-bottom: 15px;
+        background: #f7f7f7;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+        border-radius: 5px;
+    }
+    .box-wrapper div{
+    	margin-bottom: 15px;
+    	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+    	padding:30px;
+
+    }
+    body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(13,69,140,1) 11%, rgba(9,66,121,1) 19%, rgba(0,212,255,1) 100%);
+	}
+	.box-wrapper h2 {
+		margin: 0 0 15px;
+	}
+    </style>
+
+</head>
+<body>
+	<canvas> </canvas>
+	<audio id="audio_1">
+		<source src="audio/Arrival-Sir_Shir-10045_hifi.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="audio_2">
+		<source src="audio/Going_Do-ITE-9237_hifi.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="audio_3">
+		<source src="audio/Marimba_Melody(1).mp3" type="audio/mpeg">
+	</audio>
+	<audio id="audio_4">
+		<source src="audio/Sailing_-AMKstudi-10546_hifi.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="audio_5">
+		<source src="audio/serinity-kewl_loo-9589_hifi.mp3" type="audio/mpeg">
+	</audio>
+
+<div class="container  box-wrapper">
+<div class="text-center" id="centerDIV">
+	<h2>Radio Box</h2>
+	<div>
+		<button class="btn btn-success" onclick="playAudio('audio_1')">First Audio Play</button>
+		<button class="btn btn-success" onclick="pause('audio_1')">First Audio Stop</button>
+	</div>
+	<div>
+		<button class=" btn btn-warning"onclick="playAudio('audio_2')">Second</button>
+		<button class="btn btn-warning" onclick="pause('audio_2')">Second Audio Stop</button>
+	</div>
+	<div>
+		<button class="btn btn-danger"onclick="playAudio('audio_3')">Third</button>
+		<button class="btn btn-danger" onclick="pause('audio_3')">Third Audio Stop</button>
+	</div>
+	<div>
+		<button class="btn btn-primary"onclick="playAudio('audio_4')">Fourth</button>
+		<button class="btn btn-primary" onclick="pause('audio_4')">Fourth Audio Stop</button>
+	</div>
+	<div>
+		<button class="btn btn-info"onclick="playAudio('audio_5')">Fifth</button>
+		<button class="btn btn-info" onclick="pause('audio_5')">Fifth Audio Stop</button>
+	</div>	
+</div>	
+</div>	
+<!-- Loop Site:
+	http://www.flashkit.com/loops/	 
+-->	
+<!-- Also can use: 
+		https://freesound.org/browse/	 
+	-->
+		
+
+</body>
+</html>

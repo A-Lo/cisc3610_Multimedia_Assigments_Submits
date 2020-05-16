@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number Switch</title>
+	<script src="numbers.js"></script>
+	<script src="animationNum.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		canvas{
+			background: rgb(2,0,36);
+			background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,68,123,1) 11%, rgba(9,66,121,1) 19%, rgba(0,212,255,1) 100%);
+		}
+	</style>
+
+</head>
+<body>
+
+<canvas id="myCanvas" width="960" height="480"></canvas>
+<div class="container">
+	<div class="text-center ">
+	<button class="btn btn-success button-block" onclick="clickDetermination(this.id)" id="start">Start</button>
+	<button class="btn btn-danger button-block" onclick="clickDetermination(this.id)" id="stop">Stop</button>
+	</div>
+</div>
+<!-- Sprite Sheet Cutter:
+	https://ezgif.com/sprite-cutter 
+-->
+<!-- Site to rebuild sprite-sheet and get JSON values for the pieces: 
+	https://www.codeandweb.com/free-sprite-sheet-packer 
+-->
+<!-- Helps find the size and location of the sprites in sprite-sheet:
+http://www.spritecow.com/ 
+-->
+</body>
+</html>
+

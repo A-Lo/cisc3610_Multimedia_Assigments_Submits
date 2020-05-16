@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Note Central</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+
+	<link rel="stylesheet" type="text/css" href="usernotes.css">
+	<script type="text/javascript">
+		//Saves the input field, using sessionStorage
+		function	saveInfo(){
+			var usertextInput =	document.getElementById("textArea");
+			var userTitleInput = document.getElementById("title");
+			sessionStorage.setItem("userInput", usertextInput.value);
+			sessionStorage.setItem("userTitle", userTitleInput.value);
+			return false;
+		}
+		//Loads the sessionStorage key values, when toggled
+		function	reloadInfo(){
+			event.preventDefault(); //Prevents the form from refreshing upon the call of an event
+			document.getElementById("title").value = sessionStorage.getItem("userTitle");
+			document.getElementById("textArea").value = sessionStorage.getItem("userInput");
+			setbackUp();
+			return false; 
+		}
+		//Set up backup value of the key values
+		function	setbackUp(){
+			var title = document.getElementById("title").value;
+			var textArea = document.getElementById("textArea").value;
+			sessionStorage.setItem("userInput_2", title);
+			sessionStorage.setItem("userTitle_2", textArea);
+		}
+		//Clears the form information
+		function	clearInfo(){
+			event.preventDefault(); //Stops the page from reloading upon refresh
+			document.getElementById("title").value = "";
+			document.getElementById("textArea").value = "";
+
+
+		}
+		$(function(){
+			if(sessionStorage.getItem("userInput").value == "" && sessionStorage.getItem("userTitle").value == ""){
+				$("#undo").prop('disabled', true);
+			}else{
+				$("#undo").prop('disabled', false);
+			}
+		});
+		//Used to toggle the tooltip bootstrap notes
+		$(function () {
+  			$('[data-toggle="tooltip"]').tooltip()
+		})
+	</script>
+
+</head>
+<body>
+	<div class="container login-form">
+		<form method="get">
+			<h2 style="text-align: center;">My Notes</h2>
+
+			<div class="form-group" id="titleID">
+				<h4 >Title:</h4>
+				<input type="text" name="title" id="title" class="form-control" maxlength="40">
+			</div>
+			<div class="form-group" id="textareaID"> 
+				<label for="textArea">Notes:</label>
+				<textarea id="textArea" class="form-control" rows="10" cols="80" oninput="saveInfo();"></textarea>
+			</div>
+			<div id="buttonID" class="text-center">
+				<button class="btn btn-danger" id="clear"  onclick="clearInfo()" data-toggle="tooltip" data-placement="bottom" title="Clear title and textarea">Clear</button>
+				<button class="btn btn-success" id="undo" onclick="reloadInfo();" data-toggle="tooltip" data-placement="bottom" title="Restores notes from previous entry" disabled="disabled">Undo</button>
+			</div>
+			
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+
+.container {
+	max-width: 100%;
+	
+}
+
+#header{
+	border: 2px solid black;
+	padding-bottom: 40px;
+	padding-top: 50px;
+	height: 250px;
+	background-image: url("outside-background.jpg"); 
+	color:white;
+}
+#leftID{
+	max-width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 2px;
+	border: 2px solid black;
+	background: rgb(13,11,52);
+background: radial-gradient(circle, rgba(13,11,52,1) 0%, rgba(13,69,140,1) 19%, rgba(9,66,121,1) 63%, rgba(0,212,255,1) 100%);
+color: white;
+
+
+}
+h4{
+	color:black;
+	font-weight: 550;
+	border-bottom: 1px black solid;
+	
+	
+}
+/*#rightID{
+	max-width: 30%;
+	margin-right: 0px;
+	margin-left:0px;
+	border: 2px solid black;
+}*/
+
+.row #leftID{
+	width: 50%;
+}
+#contactID{
+	/*margin-bottom: 0rem;*/
+}
+#row1{
+	margin-top: 20px;
+}
+#row2{
+	margin-bottom: 30px;
+}
