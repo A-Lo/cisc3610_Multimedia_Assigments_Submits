@@ -7,7 +7,7 @@
 		canvas{
 			/*background: rgb(63,94,251);
 			background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);*/
-			border: 1px solid black;
+			border: 2px solid black;
 	}
     body {
         background: rgb(13,11,52);
@@ -27,6 +27,11 @@ background: linear-gradient(90deg, rgba(13,11,52,1) 0%, rgba(13,69,140,1) 19%, r
         min-height: 38px;
         border-radius: 2px;
 
+    }
+    .login-form h3 {
+        margin: 0 0 15px;
+        border-bottom: 1px solid black;
+        color: #0d458c;
     }
     .btn {        
         font-size: 20px;
@@ -51,8 +56,8 @@ background: linear-gradient(90deg, rgba(13,11,52,1) 0%, rgba(13,69,140,1) 19%, r
 <body>
 
 
-<div class="login-form">
-	<div class="hints form-group"></div>
+<div class="login-form"> <h3 class="text-center">Instructions</h3>
+	<div class="hints form-group"> </div>
 </div>
 <button id="buttonMe" class="btn btn-success btn-block">Press to speak</button>
 <canvas id="myCanvas" width="800" height="600" >

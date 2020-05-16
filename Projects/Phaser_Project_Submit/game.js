@@ -19,7 +19,7 @@ function preload () {
   // Load & Define our game assets
   game.load.image('sky', './assets/sky.png')
   game.load.image('ground', './assets/platform.png')
-  game.load.image('diamond', './assets/money_bag.png')
+  game.load.image('diamond', './assets/money_bag.png', )
   game.load.spritesheet('woof', './assets/woof.png', 32, 32)
 }
 
@@ -34,23 +34,29 @@ function create () {
   platforms = game.add.group()
 
   //  We will enable physics for any object that is created in this group
-  platforms.enableBody = true
+  platforms.enableBody = true;
 
   // Here we create the ground.
   const ground = platforms.create(0, game.world.height - 64, 'ground')
 
   //  Scale it to fit the width of the game (the original sprite is 400x32 in size)
-  ground.scale.setTo(2, 2)
+  ground.scale.setTo(2, 1)
 
   //  This stops it from falling away when you jump on it
   ground.body.immovable = true
 
   //  Now let's create two ledges
-  let ledge = platforms.create(400, 450, 'ground')
+  let ledge = platforms.create(450, 450, 'ground')
   ledge.body.immovable = true
 
-  ledge = platforms.create(-75, 350, 'ground')
+
+  ledge = platforms.create(-50, 350, 'ground')
   ledge.body.immovable = true
+
+//Third Platform
+  ledge = platforms.create(480, 150, 'ground');
+  ledge.body.immovable = true
+  // ledge.scale.set(1,1)
 
   // The player and its settings
   player = game.add.sprite(32, game.world.height - 150, 'woof')
@@ -60,7 +66,7 @@ function create () {
 
   //  Player physics properties. Give the little guy a slight bounce.
   player.body.bounce.y = 0.2
-  player.body.gravity.y = 800
+  player.body.gravity.y = 300
   player.body.collideWorldBounds = true
 
   //  Our two animations, walking left and right.
