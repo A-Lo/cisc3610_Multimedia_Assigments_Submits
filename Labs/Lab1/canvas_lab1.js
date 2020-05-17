@@ -76,7 +76,8 @@ for(var i = 0; i < fruits.length; i++){
 			// c.lineWidth =10;
 			// c.strokeText(retrieveName(i),start_x, start_y+ 20);
 			// c.fillstyle = "retrieveColor(i)";
-	c.fillText(retrieveName(i), start_x, start_y+ 20); 
+	c.fillText(retrieveName(i)+ "=" +retrieveQuantity(i), start_x, start_y+ 20); 
+	c.stroke();
 	c.fill(); 
 
 	c.closePath();

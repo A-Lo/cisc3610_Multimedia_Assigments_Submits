@@ -3,14 +3,53 @@
 <head>
 	<title>Neighborhood </title>
 	<link rel="stylesheet" type="text/css" href="style_project1.css">
-
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div class="topnav">
+	<!-- <div class="topnav">
 		<a class="active" href="#">Home</a>
 		<a href="file:///Users/Angelo/cisc3610_Multimedia_Assigments_Submits/Projects/Project_1/index_Project1.html">Project1-Cartoon</a> 
 		<a href="file:///Users/Angelo/cisc3610_Multimedia_Assigments_Submits/Labs/Lab1/lab1.html">Lab1-FruitBarGraph</a>
-	</div>
+	</div> -->
+
+<nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false" >
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button> 
+                <a class="navbar-left navbar-brand" href="#">Projects
+                            </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <!-- <li class="active"><a href="LearningCenterHome.html">Home <span class="sr-only">(current)</span></a>
+                    </li> -->
+                    <li><a href="../Animation_Project/cursor_animation.html">Animation Proj</a></li>
+                    <li><a href="../Data_visualization_Project/data_visual.html">Data Visualization Prof</a></li>
+                    <li><a href="../Phaser_Project_Submit/index.html">Phaser Prof</a></li>
+                    <li><a href="../Speech_Recognition_Project/speech_recognition.html">Speech Recognition</a></li>
+                    <li><a href="../Project_1/index_Project1.html">Project 1 (Cartoon)</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../../Labs">Labs</a></li>
+                    <li><a href="#l">#</a></li>
+                </ul>
+                </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+</nav> 
 	<canvas id="myCanvas"></canvas>
 	<script src="canvas_project1.js"></script>
 </body>
